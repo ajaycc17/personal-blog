@@ -53,7 +53,7 @@ export default async function Post({ params: { postId } }: Props) {
                     <h2 className="font-medium text-xl pb-3">{meta.title}</h2>
                     <div className="flex items-center gap-2 pb-3 border-b">
                         <Image
-                            src="./avatar.svg"
+                            src="/avatar.svg"
                             width={40}
                             height={40}
                             alt="Ajay Choudhury"
@@ -72,8 +72,8 @@ export default async function Post({ params: { postId } }: Props) {
                     <DsaProbSide />
                     <div className="pt-4 gap-2 mb-4 flex flex-wrap items-center">
                         <h2 className="font-medium">Tagged with:</h2>
-                        {tags.map((tag) => (
-                            <div className="text-sm font-medium font-mono capitalize bg-gray-200 dark:bg-gray-700 hover:bg-blue-800 hover:text-white dark:hover:bg-blue-300 dark:hover:text-black py-0.5 px-2 rounded">
+                        {tags.map((tag, i) => (
+                            <div key={i} className="text-sm font-medium font-mono capitalize bg-gray-200 dark:bg-gray-700 hover:bg-blue-800 hover:text-white dark:hover:bg-blue-300 dark:hover:text-black py-0.5 px-2 rounded">
                                 {tag}
                             </div>
                         ))}

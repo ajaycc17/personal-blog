@@ -23,7 +23,7 @@ export default function Navbar() {
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-3">
                             <Image
-                                src="./logo/bulb.svg"
+                                src="/logo/bulb.svg"
                                 width={40}
                                 height={40}
                                 alt="Logo"
