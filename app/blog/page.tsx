@@ -1,8 +1,7 @@
 import React from "react";
-import Image from "next/image";
 import ArticleListItem from "../components/ArticleListItem";
-import { getPostsMeta } from "@/lib/posts";
 import DsaProbSide from "../components/DsaProbSide";
+import { getPostsMeta } from "@/lib/posts";
 
 export default async function Blog() {
     const posts = await getPostsMeta();

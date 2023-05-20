@@ -18,7 +18,7 @@ export default function ArticleListItem({ post }: Props) {
             </Link>
             <div className="flex items-center gap-2 mb-3">
                 <Image
-                    src="/buildingAvatar.svg"
+                    src="./buildingAvatar.svg"
                     width={40}
                     height={40}
                     alt="Ajay Choudhury"

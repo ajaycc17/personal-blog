@@ -32,7 +32,7 @@ export default function Hero() {
                 </div>
                 <div className="md:w-2/5 w-4/6 relative">
                     <Image
-                        src="/dev1.svg"
+                        src="./dev1.svg"
                         fill={true}
                         alt="Ajay Choudhury"
                         className="heroImg"

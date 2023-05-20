@@ -2,7 +2,7 @@ import React from "react";
 
 import ArticleListItem from "./ArticleListItem";
 import { getPostsMeta } from "@/lib/posts";
-import { GrayButtonIn, GreenButtonIn } from "./BlueButtons";
+import { GrayButtonIn } from "./BlueButtons";
 import DsaProbSide from "./DsaProbSide";
 
 export default async function Articles() {

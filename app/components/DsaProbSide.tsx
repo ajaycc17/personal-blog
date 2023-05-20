@@ -16,7 +16,7 @@ export default function DsaProbSide() {
             </div>
             <div className="w-1/5">
                 <Image
-                    src="/console.svg"
+                    src="./console.svg"
                     width={60}
                     height={60}
                     alt="Notepad"

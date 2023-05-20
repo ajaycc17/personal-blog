@@ -1,7 +1,6 @@
 import ArticleListItem from "@/app/components/ArticleListItem";
 import DsaProbSide from "@/app/components/DsaProbSide";
 import { getPostsMeta } from "@/lib/posts";
-import Link from "next/link";
 
 export const revalidate = 86400;
 

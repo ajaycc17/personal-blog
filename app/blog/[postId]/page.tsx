@@ -1,12 +1,11 @@
 import React from "react";
-import { getPostsMeta, getPostByName } from "@/lib/posts";
-import { notFound } from "next/navigation";
-import getFormattedDate from "@/lib/getFormattedDate";
 import Image from "next/image";
 import Link from "next/link";
-import "highlight.js/styles/github-dark.css";
-import { GreenButtonIn } from "@/app/components/BlueButtons";
 import DsaProbSide from "@/app/components/DsaProbSide";
+import getFormattedDate from "@/lib/getFormattedDate";
+import { getPostsMeta, getPostByName } from "@/lib/posts";
+import { notFound } from "next/navigation";
+import "highlight.js/styles/github-dark.css";
 
 export const revalidate = 86400;
 
@@ -54,7 +53,7 @@ export default async function Post({ params: { postId } }: Props) {
                     <h2 className="font-medium text-xl pb-3">{meta.title}</h2>
                     <div className="flex items-center gap-2 pb-3 border-b">
                         <Image
-                            src="/avatar.svg"
+                            src="./avatar.svg"
                             width={40}
                             height={40}
                             alt="Ajay Choudhury"
