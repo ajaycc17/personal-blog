@@ -23,7 +23,9 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
-
+env:
+  GH_TOKEN: ${{ secrets.GH_TOKEN }}
+  
 jobs:
   # Build job
   build:
