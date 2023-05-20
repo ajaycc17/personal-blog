@@ -21,7 +21,7 @@ export async function getPostByName(
         {
             headers: {
                 Accept: "application/vnd.github+json",
-                Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+                Authorization: `Bearer ${process.env.GH_TOKEN}`,
                 "X-GitHub-Api-Version": "2022-11-28",
             },
         }
@@ -79,9 +79,9 @@ export async function getPostsMeta(): Promise<Meta[] | undefined> {
         {
             headers: {
                 Accept: "application/vnd.github+json",
-                Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+                Authorization: `Bearer ${process.env.GH_TOKEN}`,
                 "X-GitHub-Api-Version": "2022-11-28",
-                auth: `${process.env.GITHUB_TOKEN}`,
+                auth: `${process.env.GH_TOKEN}`,
             },
         }
     );
