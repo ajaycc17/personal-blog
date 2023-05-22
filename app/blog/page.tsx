@@ -3,6 +3,8 @@ import ArticleListItem from "../components/ArticleListItem";
 import DsaProbSide from "../components/DsaProbSide";
 import { getPostsMeta } from "@/lib/posts";
 
+export const revalidate = 300;
+
 export default async function Blog() {
     const posts = await getPostsMeta();
     if (!posts) {

@@ -137,6 +137,14 @@ li ol {
     position: absolute;
     left: 0;
 }
+
+.orb-blog-content code:not(.hljs){
+    font-size: 90%;
+    @apply bg-gray-200 dark:bg-gray-700 px-1 rounded;
+}
+pre{
+    @apply mb-4;
+}
 /* end of lists */
 /* media queries */
 @media (max-width: 921px) {

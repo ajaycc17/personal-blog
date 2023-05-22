@@ -7,7 +7,7 @@ import { getPostsMeta, getPostByName } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import "highlight.js/styles/github-dark.css";
 
-export const revalidate = 86400;
+export const revalidate = 300;
 
 type Props = {
     params: {
@@ -53,11 +53,10 @@ export default async function Post({ params: { postId } }: Props) {
                     <h2 className="font-medium text-xl pb-3">{meta.title}</h2>
                     <div className="flex items-center gap-2 pb-3 border-b">
                         <Image
-                            src="/avatar.svg"
+                            src="/buildingAvatar.svg"
                             width={40}
                             height={40}
                             alt="Ajay Choudhury"
-                            className="bg-yellow-200 rounded-full"
                         />
                         <h3 className="text-sm font-medium">
                             Ajay Choudhury &middot;

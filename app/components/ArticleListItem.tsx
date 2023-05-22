@@ -9,7 +9,7 @@ type Props = {
 };
 
 export default function ArticleListItem({ post }: Props) {
-    const { id, title, date } = post;
+    const { id, title, date, description } = post;
     const formattedDate = getFormattedDate(date);
     return (
         <article className="py-4 border-t">
@@ -30,12 +30,7 @@ export default function ArticleListItem({ post }: Props) {
                     </span>
                 </h3>
             </div>
-            <p className="mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
-                libero voluptatum earum iure? Sit quis reprehenderit nesciunt
-                doloribus autem unde quaerat molestiae hic deleniti, atque
-                temporibus dolorum assumenda porro ducimus quod earum.
-            </p>
+            <p className="mb-4">{description}</p>
             <Link
                 href={`/blog/${id}`}
                 className="flex items-center text-sm font-medium text-blue-800 hover:text-blue-700 dark:text-blue-300 dark:hover:text-yellow-300"
