@@ -3,7 +3,7 @@ import ArticleListItem from "../components/ArticleListItem";
 import DsaProbSide from "../components/DsaProbSide";
 import { getPostsMeta } from "@/lib/posts";
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 export default async function Blog() {
     const posts = await getPostsMeta();
@@ -22,7 +22,9 @@ export default async function Blog() {
                     </div>
                 </div>
                 <div className="hidden md:block md:w-2/5 border-l pl-4">
-                    <DsaProbSide />
+                    <div className="sticky top-16">
+                        <DsaProbSide />
+                    </div>
                 </div>
             </div>
         </div>

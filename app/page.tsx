@@ -1,7 +1,7 @@
 import Hero from "./components/Hero";
 import Articles from "./components/Articles";
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 export default function Home() {
     return (

@@ -7,7 +7,7 @@ import { getPostsMeta, getPostByName } from "@/lib/posts";
 import { notFound } from "next/navigation";
 import "highlight.js/styles/github-dark.css";
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 type Props = {
     params: {
@@ -45,11 +45,11 @@ export default async function Post({ params: { postId } }: Props) {
             {tag}
         </Link>
     ));
-
+    // var BlockMath = ReactKaTeX.BlockMath;
     return (
         <div className="fade-in py-8 px-2">
             <div className="max-w-5xl mx-auto flex gap-4">
-                <div className="md:w-3/5">
+                <div className="w-full md:w-3/5">
                     <h2 className="font-medium text-xl pb-3">{meta.title}</h2>
                     <div className="flex items-center gap-2 pb-3 border-b">
                         <Image
@@ -68,14 +68,19 @@ export default async function Post({ params: { postId } }: Props) {
                     <div className="pt-4 orb-blog-content">{content}</div>
                 </div>
                 <div className="hidden md:block md:w-2/5 border-l pl-4">
-                    <DsaProbSide />
-                    <div className="pt-4 gap-2 mb-4 flex flex-wrap items-center">
-                        <h2 className="font-medium">Tagged with:</h2>
-                        {tags.map((tag, i) => (
-                            <div key={i} className="text-sm font-medium font-mono capitalize bg-gray-200 dark:bg-gray-700 hover:bg-blue-800 hover:text-white dark:hover:bg-blue-300 dark:hover:text-black py-0.5 px-2 rounded">
-                                {tag}
-                            </div>
-                        ))}
+                    <div className="sticky top-16">
+                        <DsaProbSide />
+                        <div className="pt-4 gap-2 mb-4 flex flex-wrap items-center">
+                            <h2 className="font-medium">Tagged with:</h2>
+                            {tags.map((tag, i) => (
+                                <div
+                                    key={i}
+                                    className="text-sm font-medium font-mono capitalize bg-gray-200 dark:bg-gray-700 hover:bg-blue-800 hover:text-white dark:hover:bg-blue-300 dark:hover:text-black py-0.5 px-2 rounded"
+                                >
+                                    {tag}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

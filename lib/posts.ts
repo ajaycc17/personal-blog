@@ -4,6 +4,8 @@ import rehypeHighlight from "rehype-highlight/lib";
 import rehypeSlug from "rehype-slug";
 import Video from "@/app/components/Video";
 import CustomImage from "@/app/components/CustomImage";
+import Ineq from "@/app/components/Ineq";
+import Blockeq from "@/app/components/Blockeq";
 
 type Filetree = {
     tree: [
@@ -42,6 +44,8 @@ export async function getPostByName(
         components: {
             Video,
             CustomImage,
+            Ineq,
+            Blockeq,
         },
         options: {
             parseFrontmatter: true,

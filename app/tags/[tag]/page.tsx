@@ -2,7 +2,7 @@ import ArticleListItem from "@/app/components/ArticleListItem";
 import DsaProbSide from "@/app/components/DsaProbSide";
 import { getPostsMeta } from "@/lib/posts";
 
-export const revalidate = 300;
+export const revalidate = 60;
 
 type Props = {
     params: {
