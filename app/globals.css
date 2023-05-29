@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+.text-xl, .text-lg{
+    line-height: 1.5rem;
+}
+
 .photo {
     @apply rounded-[50px];
     @apply bg-[#e0e0e0];

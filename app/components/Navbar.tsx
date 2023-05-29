@@ -18,8 +18,8 @@ export default function Navbar() {
     }
     return (
         <>
-            <header className="fade-in sticky w-full top-0 z-50 backdrop-blur-md bg-gray-100/50 dark:bg-gray-950/60 px-2">
-                <div className="max-w-5xl mx-auto py-2 flex items-center justify-between">
+            <header className="fade-in sticky w-full top-0 z-50 backdrop-blur-md bg-gray-100/50 dark:bg-black/60 px-2">
+                <div className="max-w-6xl mx-auto py-2 flex items-center justify-between">
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-3">
                             <Image
@@ -28,7 +28,7 @@ export default function Navbar() {
                                 height={40}
                                 alt="Logo"
                             />
-                            <h1 className="font-medium font-mono">
+                            <h1 className="font-bold font-mono">
                                 <span className="text-orange-600 dark:text-yellow-400">
                                     ajay_
                                 </span>
@@ -45,14 +45,14 @@ export default function Navbar() {
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <BsLinkedin className="text-blue-800 dark:text-blue-600" />
+                                <BsLinkedin className="text-blue-800 dark:text-blue-400" />
                             </a>
                             <a
                                 href="https://github.com/ajaycc17"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
-                                <BsGithub className="text-gray-900 dark:text-gray-400" />
+                                <BsGithub className="text-gray-900 dark:text-gray-300" />
                             </a>
                         </div>
                     </nav>
@@ -64,9 +64,9 @@ export default function Navbar() {
             </header>
             <div
                 id="mobile-menu"
-                className="fade-in hidden p-1 fixed w-full z-10"
+                className="fade-in hidden p-1 fixed w-full z-50 backdrop-blur-md bg-gray-100/50 dark:bg-black/60 shadow-xl"
             >
-                <nav className="max-w-5xl mx-auto backdrop-blur-md bg-gray-100/50 dark:bg-gray-950/60 p-2 rounded-xl">
+                <nav className="max-w-6xl mx-auto p-2">
                     <NavbarMenu />
                 </nav>
             </div>

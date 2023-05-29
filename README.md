@@ -1,34 +1,36 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Development Server
 
-## Getting Started
+To run the development server successfully, with articles fetched. First create the `.env.local` file with a variable `GH_TOKEN` that holds the github private repository access token and place the file at the root directory.
 
-First, run the development server:
+Next, start the development server using the following command:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the development server in work.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Production
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+This app is currently hosted on Vercel on [https://ajaychoudhury.me](https://ajaychoudhury.me).
 
-## Learn More
+## Documentation and Changelog
 
-To learn more about Next.js, take a look at the following resources:
+The complete documentation for this web-app can be found here.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Contribution
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Solely developed by [Ajay Choudhury](https://linkedin.com/in/ajaycc17).
 
-## Deploy on Vercel
+## Feature to work on
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+-   include mathematical equations - done
+-   show loader before image loads on front page
+-   include resume button on portfolio
+-   Search for posts + key binding
+-   categories for blog
+-   infinite scroll in blog/lessons page
+-   icon change on dark/light change
+-   complete portfolio
+-   contact page + form
+-   list all dsa problems and solutions

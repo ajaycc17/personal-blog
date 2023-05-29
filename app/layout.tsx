@@ -1,22 +1,64 @@
+import localFont from "next/font/local";
+import { Metadata } from "next";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
-import { Inter, JetBrains_Mono } from "next/font/google";
-import { Metadata } from "next";
 
-const inter = Inter({
-    subsets: ["latin"],
-    variable: "--font-inter",
+const ember = localFont({
+    src: [
+        {
+            path: "../public/fonts/Ember/AmazonEmber_W_Rg.woff2",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Ember/AmazonEmber_W_RgIt.woff2",
+            weight: "400",
+            style: "italic",
+        },
+        {
+            path: "../public/fonts/Ember/AmazonEmber_W_SBd.woff2",
+            weight: "500",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Ember/AmazonEmber_W_SBdIt.woff2",
+            weight: "500",
+            style: "italic",
+        },
+        {
+            path: "../public/fonts/Ember/AmazonEmber_W_Bd.woff2",
+            weight: "600",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Ember/AmazonEmber_W_Th.woff2",
+            weight: "300",
+            style: "normal",
+        },
+    ],
+    variable: "--font-ember",
 });
-export const jetBrains = JetBrains_Mono({
-    subsets: ["latin"],
-    display: "block",
-    variable: "--font-jetbrains",
+
+const ember_mono = localFont({
+    src: [
+        {
+            path: "../public/fonts/Ember_mono/AmazonEmberMono_W_Rg.woff2",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "../public/fonts/Ember_mono/AmazonEmberMono_W_Bd.woff2",
+            weight: "500",
+            style: "italic",
+        },
+    ],
+    variable: "--font-ember_mono",
 });
 
 export const metadata: Metadata = {
-    title: "Personal Blog",
-    description: "Created by Ajay Choudhury",
+    title: "Home Page",
+    description: "Dev Blog",
 };
 
 export default function RootLayout({
@@ -27,7 +69,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${inter.variable} ${jetBrains.variable} dark:text-white dark:bg-gray-900`}
+                className={`${ember.variable} font-sans ${ember_mono.variable} font-mono dark:text-white dark:bg-gray-950`}
             >
                 <script
                     dangerouslySetInnerHTML={{

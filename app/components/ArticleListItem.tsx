@@ -12,25 +12,15 @@ export default function ArticleListItem({ post }: Props) {
     const { id, title, date, description } = post;
     const formattedDate = getFormattedDate(date);
     return (
-        <article className="py-4 border-t">
-            <Link href={`/blog/${id}`} className="dark:text-yellow-100">
-                <h2 className="text-lg font-medium mb-2">{title}</h2>
-            </Link>
-            <div className="flex items-center gap-2 mb-3">
-                <Image
-                    src="/buildingAvatar.svg"
-                    width={40}
-                    height={40}
-                    alt="Ajay Choudhury"
-                />
-                <h3 className="text-sm font-medium">
-                    Ajay Choudhury &middot;
-                    <span className="text-sm font-normal ml-1">
-                        {formattedDate}
-                    </span>
-                </h3>
+        <article className="p-4 bg-gray-100 dark:bg-gray-900 rounded-xl flex flex-col justify-between">
+            <div>
+                <span className="text-sm">{formattedDate}</span>
+                <Link href={`/blog/${id}`} className="dark:text-yellow-100">
+                    <h2 className="text-lg font-medium mb-2 mt-1">{title}</h2>
+                </Link>
+
+                <p className="mb-4">{description}</p>
             </div>
-            <p className="mb-4">{description}</p>
             <Link
                 href={`/blog/${id}`}
                 className="flex items-center text-sm font-medium text-blue-800 hover:text-blue-700 dark:text-blue-300 dark:hover:text-yellow-300"

@@ -1,5 +1,6 @@
 import Hero from "./components/Hero";
 import Articles from "./components/Articles";
+import Collections from "./components/Collections";
 
 export const revalidate = 60;
 
@@ -9,6 +10,7 @@ export default function Home() {
             <Hero />
             {/* @ts-expect-error Server Component */}
             <Articles />
+            <Collections />
         </div>
     );
 }

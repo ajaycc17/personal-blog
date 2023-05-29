@@ -48,7 +48,7 @@ export default async function Post({ params: { postId } }: Props) {
     // var BlockMath = ReactKaTeX.BlockMath;
     return (
         <div className="fade-in py-8 px-2">
-            <div className="max-w-5xl mx-auto flex gap-4">
+            <div className="max-w-6xl mx-auto flex gap-4">
                 <div className="w-full md:w-3/5">
                     <h2 className="font-medium text-xl pb-3">{meta.title}</h2>
                     <div className="flex items-center gap-2 pb-3 border-b">

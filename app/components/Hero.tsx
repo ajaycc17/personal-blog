@@ -5,10 +5,10 @@ import { BlueButtonIn, GrayButtonIn } from "./BlueButtons";
 
 export default function Hero() {
     return (
-        <div className="bg-gray-50 dark:bg-gray-950 bg-hero-pattern dark:bg-hero-pattern-dark px-2 bg-cover bg-no-repeat bg-bottom">
-            <div className="max-w-5xl mx-auto flex flex-col md:flex-row md:gap-16 items-center">
+        <div className="bg-gray-50 dark:bg-black bg-hero-pattern dark:bg-hero-pattern-dark px-2 bg-cover bg-no-repeat bg-bottom">
+            <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:gap-16 items-center">
                 <div className="md:w-3/5 md:py-12 pt-8 text-center md:text-left">
-                    <h1 className="text-2xl md:text-3xl font-semibold dark:text-yellow-100">
+                    <h1 className="text-2xl md:text-3xl font-medium dark:text-yellow-100">
                         I&apos;m Ajay Choudhury
                     </h1>
                     <h2 className="text-lg mt-2 flex justify-center md:justify-start items-center">

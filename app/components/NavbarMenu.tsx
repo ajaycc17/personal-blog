@@ -10,6 +10,10 @@ export default function NavbarMenu() {
                 <MdKeyboardArrowRight className="md:hidden" />
             </li>
             <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
+                <Link href="/lessons">Lessons</Link>
+                <MdKeyboardArrowRight className="md:hidden" />
+            </li>
+            <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
                 <Link href="/portfolio">Portfolio</Link>
                 <MdKeyboardArrowRight className="md:hidden" />
             </li>

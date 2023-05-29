@@ -39,7 +39,7 @@ export default async function TagPostlist({ params: { tag } }: Props) {
 
     return (
         <div className="fade-in py-8 px-2">
-            <div className="max-w-5xl mx-auto flex gap-4">
+            <div className="max-w-6xl mx-auto flex gap-4">
                 <div className="md:w-3/5">
                     <h2 className="font-medium text-xl pb-4">
                         Articles tagged with:{" "}
