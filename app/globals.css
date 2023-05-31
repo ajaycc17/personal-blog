@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.text-xl, .text-lg{
+.text-xl,
+.text-lg {
     line-height: 1.5rem;
 }
 
@@ -19,7 +20,8 @@
 .border-r,
 .border-l,
 .border-b,
-.border-t {
+.border-t,
+.border-y {
     @apply dark:border-gray-600;
 }
 
@@ -87,7 +89,7 @@ ol {
     margin-bottom: 1rem;
 }
 .orb-page ul li,
-ol li {
+.orb-page ol li {
     padding: 7px 0 0 20px;
     margin: 0 0 0 5px;
     position: relative;
@@ -95,7 +97,7 @@ ol li {
     counter-increment: steps;
 }
 .orb-blog-content ul li,
-ol li {
+.orb-blog-content ol li {
     padding: 7px 0 0 20px;
     margin: 0 0 0 5px;
     position: relative;
@@ -107,12 +109,12 @@ ol li {
     padding: 7px 0 0 30px;
 }
 .orb-page li ul,
-li ol {
+.orb-page li ol {
     margin-bottom: 0px;
     padding-bottom: 0;
 }
 .orb-blog-content li ul,
-li ol {
+.orb-blog-content li ol {
     margin-bottom: 0px;
     padding-bottom: 0;
 }
@@ -142,11 +144,11 @@ li ol {
     left: 0;
 }
 
-.orb-blog-content code:not(.hljs){
+.orb-blog-content code:not(.hljs) {
     font-size: 90%;
     @apply bg-gray-200 dark:bg-gray-700 px-1 rounded;
 }
-pre{
+pre {
     @apply mb-4;
 }
 /* end of lists */
