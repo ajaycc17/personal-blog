@@ -80,7 +80,8 @@ export default function RootLayout({
                 <script
                     src="https://kit.fontawesome.com/cd04e03c36.js"
                     crossOrigin="anonymous"
-                ></script>
+                    async
+                />
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
