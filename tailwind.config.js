@@ -16,7 +16,7 @@ module.exports = {
                 "hero-pattern-dark": "url('/waveBackDark.svg')",
             },
             fontFamily: {
-                mono: ["var(--font-ember_mono)"],
+                mono: ["var(--font-jetbrains)"],
                 sans: ["var(--font-ember)"],
             },
             screens: {

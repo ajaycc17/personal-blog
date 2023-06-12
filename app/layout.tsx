@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { JetBrains_Mono } from "next/font/google";
 import { Metadata } from "next";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -55,6 +56,11 @@ const ember_mono = localFont({
     ],
     variable: "--font-ember_mono",
 });
+const JBrain = JetBrains_Mono({
+    weight: ["400", "500", "600"],
+    subsets: ["latin"],
+    variable: "--font-jetbrains",
+});
 
 export const metadata: Metadata = {
     title: "Home Page",
@@ -69,8 +75,12 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${ember.variable} font-sans ${ember_mono.variable} font-mono dark:text-white dark:bg-gray-950`}
+                className={`${ember.variable} font-sans ${JBrain.variable} font-mono dark:text-white dark:bg-gray-950`}
             >
+                <script
+                    src="https://kit.fontawesome.com/cd04e03c36.js"
+                    crossOrigin="anonymous"
+                ></script>
                 <script
                     dangerouslySetInnerHTML={{
                         __html: `
