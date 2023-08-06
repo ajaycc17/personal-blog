@@ -8,7 +8,6 @@ export default function Home() {
     return (
         <div className="fade-in">
             <Hero image="Ajay.jpeg" />
-            {/* @ts-expect-error Server Component */}
             <Articles />
             <Collections />
         </div>
