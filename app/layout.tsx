@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import { JetBrains_Mono } from "next/font/google";
+import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { Metadata } from "next";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -61,6 +61,11 @@ const JBrain = JetBrains_Mono({
     subsets: ["latin"],
     variable: "--font-jetbrains",
 });
+const SpGrot = Space_Grotesk({
+    weight: ["400", "500", "600", "700"],
+    subsets: ["latin"],
+    variable: "--font-spgrotesk",
+});
 
 export const metadata: Metadata = {
     title: "Home Page",
@@ -75,7 +80,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${ember.variable} font-sans ${JBrain.variable} font-mono dark:text-white dark:bg-gray-950`}
+                className={`${ember.variable} font-sans ${JBrain.variable} font-mono ${SpGrot.variable} font-head dark:text-white dark:bg-gray-950`}
             >
                 <script
                     src="https://kit.fontawesome.com/cd04e03c36.js"

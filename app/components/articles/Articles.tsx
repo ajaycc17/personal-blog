@@ -1,33 +1,31 @@
 import React from "react";
-import ArticleListItem from "../components/articles/ArticleListItem";
+import Link from "next/dist/client/link";
+import ArticleListItem from "./ArticleListItem";
 import { getPostsMeta } from "@/lib/posts";
-import { BsChevronDown, BsSearch } from "react-icons/bs";
+import { GrayButtonIn } from "../BlueButtons";
+import DsaProbSide from "../DsaProbSide";
+import { MdArrowOutward } from "react-icons/md";
 import { RiSearch2Line, RiGitCommitLine } from "react-icons/ri";
 
-export const revalidate = 60;
-
-export default async function Blog() {
+export default async function Articles() {
     const posts = await getPostsMeta();
     if (!posts) {
         return <p className="mt-10">Sorry! No Posts Available</p>;
     }
+
     return (
-        <div className="fade-in py-8 px-2">
+        <div className="px-2 md:px-4 py-8">
             <div className="max-w-6xl mx-auto">
-                <div className="flex items-end justify-between pb-2 border-b">
+                <div className="flex justify-between items-end border-b pb-2">
                     <h2 className="font-medium text-xl flex items-center gap-2">
                         <RiGitCommitLine className="w-7 h-7 rounded-full p-1 bg-[#edf9e7] text-green-800" />
-                        All Articles
+                        Recent Articles
                     </h2>
-                    <div className="flex items-center gap-8">
-                        <button className="flex items-center gap-2">
-                            Categories <BsChevronDown />
-                        </button>
-                        <BsSearch className="sm:hidden" />
+                    <div className="flex items-center gap-2">
                         <form className="sm:flex items-center hidden">
                             <input
                                 type="search"
-                                className="bg-gray-100 dark:bg-gray-800 rounded-s-xl outline-none px-4 py-1.5 placeholder:text-gray-500 block w-full"
+                                className="bg-gray-100 dark:bg-gray-800 rounded-s-xl outline-none px-4 py-1.5 placeholder:text-gray-500"
                                 placeholder="Search articles..."
                                 required
                             />
@@ -38,14 +36,10 @@ export default async function Blog() {
                                 <RiSearch2Line />
                             </button>
                         </form>
+                        <GrayButtonIn target="/blog" text="View all" />
                     </div>
                 </div>
-                <div className="mt-4 p-4 bg-gray-100 dark:bg-gray-900 hidden flex-wrap gap-2 rounded-xl">
-                    <div className="text-sm capitalize bg-gray-300 dark:bg-gray-700 hover:bg-blue-800 hover:text-white dark:hover:bg-blue-300 dark:hover:text-black py-0.5 px-2 rounded">
-                        Next.js
-                    </div>
-                </div>
-                <div className="grid sm:grid-cols-2 mid:grid-cols-3 gap-4 pt-4">
+                <div className="grid sm:grid-cols-2 mid:grid-cols-3 gap-4 py-4">
                     {posts.map((post) => (
                         <ArticleListItem key={post.id} post={post} />
                     ))}

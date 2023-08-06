@@ -4,13 +4,13 @@ import Link from "next/link";
 
 export default function NavbarMenu() {
     return (
-        <ul className="flex flex-col md:flex-row md:gap-8 text-sm font-medium">
+        <ul className="flex flex-col md:flex-row md:gap-8 font-semibold font-head">
             <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
                 <Link href="/blog">Articles</Link>
                 <MdKeyboardArrowRight className="md:hidden" />
             </li>
             <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
-                <Link href="/lessons">Lessons</Link>
+                <Link href="/projects">Projects</Link>
                 <MdKeyboardArrowRight className="md:hidden" />
             </li>
             <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
@@ -21,7 +21,7 @@ export default function NavbarMenu() {
                 <Link href="/dsa">DSA Problems</Link>
                 <MdKeyboardArrowRight className="md:hidden" />
             </li>
-            <li className="flex md:block justify-between items-center">
+            <li className="flex md:hidden justify-between items-center">
                 <Link href="/contact">Contact</Link>
                 <MdKeyboardArrowRight className="md:hidden" />
             </li>

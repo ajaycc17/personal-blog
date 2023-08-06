@@ -14,10 +14,12 @@ module.exports = {
                     "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
                 "hero-pattern": "url('/waveBack.svg')",
                 "hero-pattern-dark": "url('/waveBackDark.svg')",
+                "hero-grad": "url('/gradient.jpg')",
             },
             fontFamily: {
                 mono: ["var(--font-jetbrains)"],
                 sans: ["var(--font-ember)"],
+                head: ["var(--font-spgrotesk)"],
             },
             screens: {
                 mid: "900px",

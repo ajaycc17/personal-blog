@@ -27,7 +27,7 @@
 /* single blog page CSS */
 /* --headings */
 .orb-blog-content h2 {
-    @apply text-2xl;
+    @apply text-xl;
 }
 .orb-blog-content h3 {
     @apply text-xl;
@@ -41,9 +41,6 @@
     @apply font-medium mb-3 text-blue-900 dark:text-blue-300;
 }
 @media (max-width: 767.98px) {
-    .orb-blog-content h2 {
-        @apply text-xl;
-    }
     .orb-blog-content h3 {
         @apply text-lg;
     }

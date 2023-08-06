@@ -1,42 +1,94 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Image from "next/image";
-import { BsTerminalFill } from "react-icons/bs";
-import { BlueButtonIn, GrayButtonIn } from "./BlueButtons";
+import Link from "next/link";
+import { BlackButtonIn, TransparentButton } from "./BlueButtons";
+import { MdArrowOutward } from "react-icons/md";
+import { RiGithubFill, RiArrowRightLine } from "react-icons/ri";
 
-export default function Hero() {
+export default function Hero(props: { image: string }) {
     return (
-        <div className="bg-gray-50 dark:bg-black bg-hero-pattern dark:bg-hero-pattern-dark px-2 bg-cover bg-no-repeat bg-bottom">
-            <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:gap-16 items-center">
-                <div className="md:w-3/5 md:py-12 pt-8 text-center md:text-left">
-                    <h1 className="text-2xl md:text-3xl font-medium dark:text-yellow-100">
-                        I&apos;m Ajay Choudhury
+        <div className="py-8 px-2 md:px-4 bg-gray-100 dark:bg-gray-900">
+            <div className="max-w-6xl mx-auto grid grid-cols-6 gap-4">
+                <div className="col-span-6 lg:col-span-4 text-center md:text-left flex flex-col justify-center font-head font-medium mb-4 lg:mb-0">
+                    <h1 className="text-2xl md:text-4xl font-bold dark:text-yellow-100">
+                        Hello, I&apos;m Ajay Choudhury
                     </h1>
-                    <h2 className="text-lg mt-2 flex justify-center md:justify-start items-center">
+                    <h2 className="text-lg mt-6">
                         Welcome to my{" "}
-                        <span className="flex items-center px-2 rounded mx-1 font-mono font-medium text-base bg-gray-300 dark:bg-gray-700">
-                            <BsTerminalFill className="mr-1.5 dark:text-green-400" />
+                        <span className="bg-sky-800 text-sky-50 px-2.5 font-mono text-base rounded-md">
                             Digital
                         </span>{" "}
                         Space
                     </h2>
-                    <p className="max-w-3xl mt-3">
-                        I&apos;m a MS student in EECS@IISER Bhopal. I love
-                        coding, cryptography, open-source projects and write
-                        about code, design, and life. I like sci-fi, reading,
-                        and football.
+                    <p className="mt-4">
+                        I&apos;m a BS-MS graduate in EECS and DSE from IISER
+                        Bhopal. Actively looking for SDE/SWE roles/internships.
+                        I am interested in full-stack development and machine
+                        learning.
                     </p>
-                    <div className="flex justify-center md:justify-start gap-3 mt-4">
-                        <BlueButtonIn target="/portfolio" text="Portfolio" />
-                        <GrayButtonIn target="/blog" text="Articles" />
+                    <div className="flex justify-center md:justify-start gap-3 mt-6">
+                        <BlackButtonIn target="/portfolio" text="Portfolio" />
+                        <TransparentButton
+                            target="/my-resume.pdf"
+                            text="My Resume"
+                        />
                     </div>
                 </div>
-                <div className="md:w-2/5 w-4/6 relative">
-                    <Image
-                        src="/dev1.svg"
-                        fill={true}
+                <div className="col-span-6 sm:col-span-3 lg:col-span-2 relative rounded-3xl">
+                    <img
+                        src={`/${props.image}`}
                         alt="Ajay Choudhury"
-                        className="heroImg"
+                        className="rounded-3xl"
                     />
+                </div>
+                <div className="h-full hidden sm:block lg:hidden col-span-3 lg:col-span-2 relative bg-gray-300 dark:bg-gray-800 rounded-3xl p-6 font-head font-medium">
+                    <div className="flex flex-col justify-between h-full">
+                        <div className="flex flex-col gap-2">
+                            <h2 className="flex items-center font-semibold text-xl border-b border-gray-400 pb-2 mb-3 dark:text-blue-300">
+                                All Projects
+                                <sup>
+                                    <MdArrowOutward />
+                                </sup>
+                            </h2>
+                            <Link
+                                href="/"
+                                className="border-b border-gray-400 pb-2 flex items-center justify-between"
+                            >
+                                Word Counter
+                                <RiArrowRightLine />
+                            </Link>
+                            <Link
+                                href="/"
+                                className="border-b border-gray-400 pb-2 flex items-center justify-between"
+                            >
+                                Weather App
+                                <RiArrowRightLine />
+                            </Link>
+                            <Link
+                                href="/"
+                                className="border-b border-gray-400 pb-2 flex items-center justify-between"
+                            >
+                                Expense Tracker
+                                <RiArrowRightLine />
+                            </Link>
+                            <Link
+                                href="/"
+                                className=" flex items-center justify-between"
+                            >
+                                ChatBox: Group Chat
+                                <RiArrowRightLine />
+                            </Link>
+                        </div>
+                        <div>
+                            <Link
+                                href="/"
+                                className="bg-black inline-flex items-center gap-2 text-white py-1 px-3 rounded-lg"
+                            >
+                                <RiGithubFill /> See on GitHub
+                            </Link>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

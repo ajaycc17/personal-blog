@@ -1,4 +1,4 @@
-import ArticleListItem from "@/app/components/ArticleListItem";
+import ArticleListItem from "@/app/components/articles/ArticleListItem";
 import DsaProbSide from "@/app/components/DsaProbSide";
 import { getPostsMeta } from "@/lib/posts";
 

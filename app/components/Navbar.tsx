@@ -4,7 +4,7 @@ import React from "react";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
 import { MdMenu } from "react-icons/md";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
+import { RiChatSmile2Line } from "react-icons/ri";
 import NavbarMenu from "./NavbarMenu";
 
 export default function Navbar() {
@@ -23,10 +23,11 @@ export default function Navbar() {
                     <div className="flex items-center">
                         <Link href="/" className="flex items-center gap-3">
                             <Image
-                                src="/logo/bulb.svg"
+                                src="/logo/logo.svg"
                                 width={40}
                                 height={40}
                                 alt="Logo"
+                                className="myfilter"
                             />
                             <h1 className="font-bold font-mono">
                                 <span className="text-orange-600 dark:text-yellow-400">
@@ -37,24 +38,14 @@ export default function Navbar() {
                         </Link>
                         <ThemeToggle />
                     </div>
-                    <nav className="hidden md:flex items-center">
+                    <nav className="hidden md:flex items-center md:gap-6">
                         <NavbarMenu />
-                        <div className="flex text-lg gap-6 items-center ml-8">
-                            <a
-                                href="https://linkedin.com/in/ajaycc17"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <BsLinkedin className="text-blue-800 dark:text-blue-400" />
-                            </a>
-                            <a
-                                href="https://github.com/ajaycc17"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <BsGithub className="text-gray-900 dark:text-gray-300" />
-                            </a>
-                        </div>
+                        <Link
+                            href="/contact"
+                            className="bg-black dark:bg-blue-800 text-white px-3 py-1 rounded-lg font-head font-medium"
+                        >
+                            Contact
+                        </Link>
                     </nav>
                     <MdMenu
                         className="md:hidden text-2xl cursor-pointer"
