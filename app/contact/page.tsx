@@ -1,11 +1,11 @@
-import { Metadata } from "next";
+// import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-export const metadata: Metadata = {
-    title: "Contact Me",
-    description: "Contact me.",
-};
+// export const metadata: Metadata = {
+//     title: "Contact Me",
+//     description: "Contact me.",
+// };
 
 export default function page() {
     return (
