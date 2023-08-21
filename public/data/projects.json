@@ -1,0 +1,16 @@
+[
+    {
+        "title": "ChatBox",
+        "desc": "A group chat application with MySQL database and Socket.io.",
+        "repo": "https://github.com/ajaycc17/group-chat-app",
+        "doc": "https://github.com/ajaycc17/group-chat-app",
+        "icon": "./projects/chatbox.svg"
+    },
+    {
+        "title": "ExpoTrack",
+        "desc": "An online expenditure tracking application with premium features.",
+        "repo": "https://github.com/ajaycc17/group-chat-app",
+        "doc": "https://github.com/ajaycc17/group-chat-app",
+        "icon": "./projects/expotrack.svg"
+    }
+]

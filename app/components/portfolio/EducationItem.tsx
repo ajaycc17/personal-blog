@@ -1,5 +1,3 @@
-import React from "react";
-
 export default function EducationItem(props: {
     time: string;
     degree: string;

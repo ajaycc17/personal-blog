@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import { BsGithub, BsGlobe2 } from "react-icons/bs";
-import { RiAttachmentLine, RiGitCommitLine } from "react-icons/ri";
 import Link from "next/link";
+import { BsGithub, BsGlobe2 } from "react-icons/bs";
+import { RiAttachmentLine } from "react-icons/ri";
 
 export default function ExperienceItem(props: {
     image: string;
@@ -20,7 +20,7 @@ export default function ExperienceItem(props: {
                 <img
                     src={props.image}
                     alt="IISERB"
-                    className="w-16 h-16 bg-white rounded-full"
+                    className="w-12 h-12 p-0.5 bg-white rounded-full"
                 />
                 <div>
                     <span className="mb-1 text-sm font-normal leading-none text-gray-600 dark:text-indigo-200">

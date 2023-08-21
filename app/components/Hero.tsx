@@ -1,25 +1,41 @@
+"use client";
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-import Image from "next/image";
+import { useEffect, useRef } from "react";
+import Typed from "typed.js";
 import Link from "next/link";
 import { BlackButtonIn, TransparentButton } from "./BlueButtons";
 import { MdArrowOutward } from "react-icons/md";
 import { RiGithubFill, RiArrowRightLine } from "react-icons/ri";
 
 export default function Hero(props: { image: string }) {
+    const dyno = useRef<HTMLSpanElement>(null);
+    useEffect(() => {
+        const typed = new Typed(dyno.current, {
+            strings: ["Proud Indian", "Software Engineer", "AI/ML Enthusiast"],
+            startDelay: 300,
+            typeSpeed: 50,
+            backSpeed: 10,
+            backDelay: 1000,
+            showCursor: false,
+            loop: true,
+        });
+        return () => {
+            typed.destroy();
+        };
+    }, []);
     return (
-        <div className="py-8 px-2 md:px-4 bg-gray-100 dark:bg-gray-900">
+        <div className="fade-in py-8 px-2 md:px-4 bg-gray-100 dark:bg-gray-900">
             <div className="max-w-6xl mx-auto grid grid-cols-6 gap-4">
                 <div className="col-span-6 lg:col-span-4 text-center md:text-left flex flex-col justify-center font-head font-medium mb-4 lg:mb-0">
                     <h1 className="text-2xl md:text-4xl font-bold dark:text-yellow-100">
                         Hello, I&apos;m Ajay Choudhury
                     </h1>
-                    <h2 className="text-lg mt-6">
-                        Welcome to my{" "}
-                        <span className="bg-sky-800 text-sky-50 px-2.5 font-mono text-base rounded-md">
-                            Digital
-                        </span>{" "}
-                        Space
+                    <h2 className="text-xl mt-6">
+                        I am a{" "}
+                        <span
+                            ref={dyno}
+                            className="border-b border-gray-400 text-lg text-blue-700 dark:text-yellow-400 font-mono"
+                        ></span>
                     </h2>
                     <p className="mt-4">
                         I&apos;m a BS-MS graduate in EECS and DSE from IISER
@@ -30,7 +46,7 @@ export default function Hero(props: { image: string }) {
                     <div className="flex justify-center md:justify-start gap-3 mt-6">
                         <BlackButtonIn target="/portfolio" text="Portfolio" />
                         <TransparentButton
-                            target="/my-resume.pdf"
+                            target="https://drive.google.com/file/d/1GX84CaySNhmvIsBYm-RzMuyM-kEjzxjE/view"
                             text="My Resume"
                         />
                     </div>

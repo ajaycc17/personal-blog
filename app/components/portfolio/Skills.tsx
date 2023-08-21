@@ -1,9 +1,9 @@
-import { RiCloudLine } from "react-icons/ri";
 import SkillItem from "./SkillItem";
+import { RiCloudLine } from "react-icons/ri";
 
 export default function Skills() {
     return (
-        <div>
+        <div className="fade-in">
             <h2 className="font-semibold font-head text-xl flex items-center gap-2 pb-2 mb-4 border-b">
                 <RiCloudLine />
                 Technical Skills

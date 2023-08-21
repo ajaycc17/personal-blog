@@ -1,6 +1,6 @@
 import Hero from "./components/Hero";
 import Articles from "./components/articles/Articles";
-import Collections from "./components/projects/Projects";
+import Projects from "./components/projects/Projects";
 
 export const revalidate = 60;
 
@@ -9,7 +9,11 @@ export default function Home() {
         <div className="fade-in">
             <Hero image="Ajay.jpeg" />
             <Articles />
-            <Collections />
+            <Projects
+                limit={6}
+                showBtn={true}
+                bg="bg-gray-100 dark:bg-gray-900"
+            />
         </div>
     );
 }

@@ -1,5 +1,3 @@
-import React from "react";
-import Image from "next/image";
 import Link from "next/link";
 import getFormattedDate from "@/lib/getFormattedDate";
 import { MdArrowOutward } from "react-icons/md";

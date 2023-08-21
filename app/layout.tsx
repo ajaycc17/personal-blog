@@ -1,6 +1,6 @@
+import { Metadata } from "next";
 import localFont from "next/font/local";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
-import { Metadata } from "next";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import "./globals.css";
@@ -41,21 +41,6 @@ const ember = localFont({
     variable: "--font-ember",
 });
 
-const ember_mono = localFont({
-    src: [
-        {
-            path: "../public/fonts/Ember_mono/AmazonEmberMono_W_Rg.woff2",
-            weight: "400",
-            style: "normal",
-        },
-        {
-            path: "../public/fonts/Ember_mono/AmazonEmberMono_W_Bd.woff2",
-            weight: "500",
-            style: "italic",
-        },
-    ],
-    variable: "--font-ember_mono",
-});
 const JBrain = JetBrains_Mono({
     weight: ["400", "500", "600"],
     subsets: ["latin"],
@@ -69,7 +54,7 @@ const SpGrot = Space_Grotesk({
 
 export const metadata: Metadata = {
     title: "Home Page",
-    description: "Dev Blog",
+    description: "Dev Blog by Ajay Choudhury.",
 };
 
 export default function RootLayout({

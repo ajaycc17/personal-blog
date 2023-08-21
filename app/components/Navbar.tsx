@@ -1,11 +1,9 @@
 "use client";
 import Link from "next/link";
-import React from "react";
 import Image from "next/image";
 import ThemeToggle from "./ThemeToggle";
-import { MdMenu } from "react-icons/md";
-import { RiChatSmile2Line } from "react-icons/ri";
 import NavbarMenu from "./NavbarMenu";
+import { MdMenu } from "react-icons/md";
 
 export default function Navbar() {
     function showMenu() {
@@ -21,9 +19,9 @@ export default function Navbar() {
             <header className="fade-in sticky w-full top-0 z-50 backdrop-blur-md bg-gray-100/50 dark:bg-black/60 px-2">
                 <div className="max-w-6xl mx-auto py-2 flex items-center justify-between">
                     <div className="flex items-center">
-                        <Link href="/" className="flex items-center gap-3">
+                        <Link href="/" className="flex items-center gap-2">
                             <Image
-                                src="/logo/logo.svg"
+                                src="/logo/dumbbel.svg"
                                 width={40}
                                 height={40}
                                 alt="Logo"

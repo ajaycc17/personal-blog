@@ -1,6 +1,5 @@
-import React from "react";
-import { MdKeyboardArrowRight } from "react-icons/md";
 import Link from "next/link";
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function NavbarMenu() {
     return (

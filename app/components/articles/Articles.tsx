@@ -1,10 +1,6 @@
-import React from "react";
-import Link from "next/dist/client/link";
-import ArticleListItem from "./ArticleListItem";
 import { getPostsMeta } from "@/lib/posts";
+import ArticleListItem from "./ArticleListItem";
 import { GrayButtonIn } from "../BlueButtons";
-import DsaProbSide from "../DsaProbSide";
-import { MdArrowOutward } from "react-icons/md";
 import { RiSearch2Line, RiGitCommitLine } from "react-icons/ri";
 
 export default async function Articles() {
@@ -14,7 +10,7 @@ export default async function Articles() {
     }
 
     return (
-        <div className="px-2 md:px-4 py-8">
+        <div className="fade-in px-2 md:px-4 py-8">
             <div className="max-w-6xl mx-auto">
                 <div className="flex justify-between items-end border-b pb-2">
                     <h2 className="font-medium text-xl flex items-center gap-2">

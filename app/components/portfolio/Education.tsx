@@ -3,7 +3,7 @@ import EducationItem from "./EducationItem";
 
 export default function Education() {
     return (
-        <div className="mt-8">
+        <div className="fade-in mt-8">
             <h2 className="font-semibold font-head text-xl flex items-center gap-2 pb-2 mb-4 border-b">
                 <RiBook2Line />
                 Education

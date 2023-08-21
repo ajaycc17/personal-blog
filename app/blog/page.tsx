@@ -1,10 +1,15 @@
-import React from "react";
-import ArticleListItem from "../components/articles/ArticleListItem";
-import { getPostsMeta } from "@/lib/posts";
+import { Metadata } from "next";
 import { BsChevronDown, BsSearch } from "react-icons/bs";
 import { RiSearch2Line, RiGitCommitLine } from "react-icons/ri";
+import { getPostsMeta } from "@/lib/posts";
+import ArticleListItem from "../components/articles/ArticleListItem";
 
 export const revalidate = 60;
+
+export const metadata: Metadata = {
+    title: "Dev Blog",
+    description: "Ajay's Dev Blog",
+};
 
 export default async function Blog() {
     const posts = await getPostsMeta();

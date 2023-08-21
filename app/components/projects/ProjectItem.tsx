@@ -1,31 +1,47 @@
-import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { MdArrowOutward } from "react-icons/md";
-import { RiChat1Line } from "react-icons/ri";
 
-export default function ProjectItem() {
+export default function ProjectItem(props: {
+    title: string;
+    desc: string;
+    icon: string;
+    repo: string;
+    doc: string;
+}) {
     return (
         <div className="bg-gray-200 hover:bg-gray-300 dark:bg-gray-800 p-4 rounded-xl flex flex-col justify-between">
             <div>
-                <h2 className="text-lg font-medium mb-2 mt-1 dark:text-yellow-100 flex items-center gap-2">
-                    <RiChat1Line className="w-8 h-8 bg-lime-50 text-green-800 rounded-full p-1" />
-                    ChatBox
+                <h2 className="text-lg font-medium mb-2 mt-1 dark:text-green-200 flex items-center gap-2">
+                    <Image
+                        src={props.icon}
+                        alt={props.title}
+                        width={40}
+                        height={40}
+                        className="bg-white rounded-full p-0.5"
+                    />
+                    {props.title}
                 </h2>
-                <p className="mb-2">
-                    A group chat application with JWT-authentication, MySQL
-                    database and Socket.io.
-                </p>
+                <p className="mb-2">{props.desc}</p>
             </div>
-            <Link
-                href="https://github.com/ajaycc17/group-chat-app"
-                className="flex items-center text-sm font-medium text-blue-800 hover:text-blue-700 dark:text-blue-300 dark:hover:text-yellow-300"
-                target="_blank"
-            >
-                See Now
-                <sup>
-                    <MdArrowOutward />
-                </sup>
-            </Link>
+            <div className="flex justify-between">
+                <Link
+                    href={props.repo}
+                    className="flex items-center text-sm font-medium text-blue-800 hover:text-blue-700 dark:text-blue-300 dark:hover:text-yellow-300"
+                    target="_blank"
+                >
+                    See Now
+                    <sup>
+                        <MdArrowOutward />
+                    </sup>
+                </Link>
+                <Link
+                    href={props.doc}
+                    className="flex items-center text-sm font-medium text-blue-800 hover:text-blue-700 dark:text-blue-300 dark:hover:text-yellow-300"
+                >
+                    Read
+                </Link>
+            </div>
         </div>
     );
 }

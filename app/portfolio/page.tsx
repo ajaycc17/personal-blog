@@ -1,15 +1,14 @@
-import React from "react";
+import { Metadata } from "next";
 import Hero from "../components/Hero";
-import Link from "next/dist/client/link";
-import { GrayButtonIn } from "../components/BlueButtons";
-import { RiCompasses2Line } from "react-icons/ri";
-import { MdArrowOutward } from "react-icons/md";
 import Projects from "../components/projects/Projects";
-
-import CollectionItem from "../components/projects/ProjectItem";
 import Experience from "../components/portfolio/Experience";
 import Skills from "../components/portfolio/Skills";
 import Education from "../components/portfolio/Education";
+
+export const metadata: Metadata = {
+    title: "Portfolio",
+    description: "Ajay's Portfolio",
+};
 
 export default function Portfolio() {
     return (
@@ -30,8 +29,11 @@ export default function Portfolio() {
                     </div>
                 </div>
             </div>
-            {/* projects section */}
-            <Projects />
+            <Projects
+                limit={6}
+                showBtn={true}
+                bg="bg-gray-100 dark:bg-gray-900"
+            />
         </div>
     );
 }

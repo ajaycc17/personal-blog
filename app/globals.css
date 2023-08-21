@@ -4,8 +4,12 @@
 /* font and text */
 .text-xl,
 .text-lg {
-    line-height: 1.5rem;
+    line-height: 1.4rem;
 }
+/* body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !important;
+} */
 /* end of font and text */
 
 /* hero image */
@@ -38,7 +42,7 @@
 .orb-blog-content h4,
 .orb-blog-content h5,
 .orb-blog-content h6 {
-    @apply font-medium mb-3 text-blue-900 dark:text-blue-300;
+    @apply font-medium mb-3 text-blue-800 dark:text-green-200;
 }
 @media (max-width: 767.98px) {
     .orb-blog-content h3 {
@@ -48,9 +52,8 @@
 /* --end of headings */
 /* --paragraph */
 .orb-blog-content p {
-    @apply leading-6;
+    line-height: 1.4rem;
     @apply mb-4;
-    @apply text-justify;
     @apply justify-center;
 }
 /* --end of paragraph */
@@ -69,7 +72,7 @@
 }
 .orb-blog-content ul li,
 .orb-blog-content ol li {
-    padding: 7px 0 7px 20px;
+    padding: 7px 0 7px 28px;
     margin: 0 0 0 5px;
     position: relative;
     word-wrap: break-word;
@@ -85,7 +88,7 @@
 }
 .orb-blog-content ol li + li,
 .orb-blog-content ul li + li {
-    @apply border-t dark:border-gray-800;
+    @apply border-t dark:border-gray-700;
 }
 .orb-blog-content li ul,
 .orb-blog-content li ol {
@@ -119,7 +122,7 @@
 /* --inline code and highlight js */
 .orb-blog-content code:not(.hljs) {
     font-size: 90%;
-    @apply bg-gray-200 dark:bg-gray-800 px-1 rounded dark:text-sky-400;
+    @apply bg-gray-200 dark:bg-sky-950 px-1.5 rounded dark:text-sky-300;
 }
 pre {
     @apply mb-4;
@@ -135,13 +138,13 @@ pre {
 /* scrollbar */
 ::-webkit-scrollbar {
     width: 10px;
-    height: 3px;
+    height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-    @apply bg-gray-600;
+    @apply bg-gray-300;
 }
 ::-webkit-scrollbar-track {
-    @apply bg-gray-800;
+    @apply bg-gray-600;
 }
 /* --Hide scrollbar */
 /* ::-webkit-scrollbar {

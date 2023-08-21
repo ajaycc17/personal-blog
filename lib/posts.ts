@@ -2,10 +2,10 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import rehypeAutolinkHeadings from "rehype-autolink-headings/lib";
 import rehypeHighlight from "rehype-highlight/lib";
 import rehypeSlug from "rehype-slug";
-import Video from "@/app/components/Video";
-import CustomImage from "@/app/components/CustomImage";
-import Ineq from "@/app/components/Ineq";
-import Blockeq from "@/app/components/Blockeq";
+import CustomImage from "@/app/components/articles/CustomImage";
+import Video from "@/app/components/articles/Video";
+import Ineq from "@/app/components/articles/Ineq";
+import Blockeq from "@/app/components/articles/Blockeq";
 
 type Filetree = {
     tree: [

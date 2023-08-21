@@ -1,10 +1,9 @@
-import { BsGithub, BsGlobe2 } from "react-icons/bs";
-import { RiAttachmentLine, RiGitCommitLine } from "react-icons/ri";
 import ExperienceItem from "./ExperienceItem";
+import { RiGitCommitLine } from "react-icons/ri";
 
 export default function Experience() {
     return (
-        <div className="mid:w-3/5">
+        <div className="fade-in mid:w-3/5">
             <div className="pb-2 border-b">
                 <h2 className="font-semibold font-head text-xl flex items-center gap-2">
                     <RiGitCommitLine />
@@ -14,7 +13,7 @@ export default function Experience() {
             <div className="pt-4">
                 <ol className="relative border-l border-gray-400 dark:border-gray-600">
                     <ExperienceItem
-                        image="iiserb.png"
+                        image="/portfolio/glazeline.png"
                         date="May 2023"
                         company="Glazeline"
                         role="Frontend Developer"
@@ -24,7 +23,7 @@ export default function Experience() {
                         letter=""
                     />
                     <ExperienceItem
-                        image="iiserb.png"
+                        image="/portfolio/eecs.png"
                         date="Jul 2022 - Sep 2022"
                         company="IISER Bhopal"
                         role="Web Developer Intern"
@@ -34,7 +33,7 @@ export default function Experience() {
                         letter="https://drive.google.com/file/d/1uRFAkBfF9O0IgHeItF26Y3NYl9r8YJO_/view?usp=sharing"
                     />
                     <ExperienceItem
-                        image="iiserb.png"
+                        image="/portfolio/iiserb.png"
                         date="Apr 2022 - Jul 2022"
                         company="IISER Bhopal"
                         role="Teaching Assistant"
