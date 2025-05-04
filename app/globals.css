@@ -1,10 +1,116 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* globals.css or your main CSS file */
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+    --font-sans: var(--font-msans);
+    --font-head: var(--font-spgrotesk);
+    --font-mono: var(--font-jetbrains);
+    --breakpoint-mid: 56rem;
+  }
+
+.hero-section {
+  position: relative;
+  background-color: #ffffff;
+  @apply dark:bg-[#0a0e0f];
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.12) 1px, transparent 1px);
+  background-size: 94px 64px;
+  background-repeat: repeat;
+  pointer-events: none;
+
+  /* Apply radial mask to fade edges */
+  -webkit-mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  mask-image: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 1) 30%,
+    rgba(0, 0, 0, 0) 70%
+  );
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.dark .hero-section::before {
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.2) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 1px, transparent 1px);
+}
+
+.deco {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  @apply sm:w-24 sm:h-24;
+  opacity: 0.2;
+  z-index: 1;
+  pointer-events: none;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+      transform: translateY(5px) rotate(2deg);
+    }
+    50% {
+      transform: translateY(-5px) rotate(-2deg);
+    }
+    100% {
+      transform: translateY(5px) rotate(2deg);
+    }
+  }
+  
+
+/* Position each image manually */
+.deco-1 {
+  top: 18%;
+  left: 10%;
+  animation-delay: 0s;
+}
+.deco-2 {
+  top: 5%;
+  right: 37%;
+    animation-delay: 0s;
+}
+.deco-3 {
+  bottom: 30%;
+  left: 25%;
+    animation-delay: 0s;
+}
+.deco-4 {
+  bottom: 35;
+  right: 30%;
+    animation-delay: 0s;
+}
+.deco-5 {
+  top: 30%;
+  right: 5%;
+    animation-delay: 0s;
+}
+
 /* font and text */
 .text-xl,
 .text-lg {
-    line-height: 1.4rem;
+  line-height: 1.4rem;
 }
 /* body {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
@@ -14,7 +120,7 @@
 
 /* hero image */
 .heroImg {
-    position: relative !important;
+  position: relative !important;
 }
 /* end of hero image */
 
@@ -24,17 +130,17 @@
 .border-b,
 .border-t,
 .border-y {
-    @apply dark:border-gray-600;
+  @apply dark:border-gray-600;
 }
 /* end of border for light and dark mode */
 
 /* single blog page CSS */
 /* --headings */
 .orb-blog-content h2 {
-    @apply text-xl;
+  @apply text-xl;
 }
 .orb-blog-content h3 {
-    @apply text-xl;
+  @apply text-xl;
 }
 .orb-blog-content h1,
 .orb-blog-content h2,
@@ -42,132 +148,132 @@
 .orb-blog-content h4,
 .orb-blog-content h5,
 .orb-blog-content h6 {
-    @apply font-medium mb-3 text-blue-800 dark:text-green-200;
+  @apply font-medium mb-3 text-blue-800 dark:text-green-200;
 }
 @media (max-width: 767.98px) {
-    .orb-blog-content h3 {
-        @apply text-lg;
-    }
+  .orb-blog-content h3 {
+    @apply text-lg;
+  }
 }
 /* --end of headings */
 /* --paragraph */
 .orb-blog-content p {
-    line-height: 1.4rem;
-    @apply mb-4;
-    @apply justify-center;
+  line-height: 1.4rem;
+  @apply mb-4;
+  @apply justify-center;
 }
 /* --end of paragraph */
 /* --links */
 .orb-blog-content a:not(.orb-blog-content h2 a) {
-    @apply text-blue-800 dark:text-yellow-400 font-medium border-b;
+  @apply text-blue-800 dark:text-yellow-400 font-medium border-b;
 }
 /* --end of links */
 /* --lists */
 .orb-blog-content ul,
 .orb-blog-content ol {
-    list-style: outside none none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 1rem;
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 .orb-blog-content ul li,
 .orb-blog-content ol li {
-    padding: 7px 0 7px 28px;
-    margin: 0 0 0 5px;
-    position: relative;
-    word-wrap: break-word;
-    counter-increment: steps;
+  padding: 7px 0 7px 28px;
+  margin: 0 0 0 5px;
+  position: relative;
+  word-wrap: break-word;
+  counter-increment: steps;
 }
 @media (max-width: 921px) {
-    .orb-blog-content ul li {
-        margin: 0 0 0 2px;
-    }
+  .orb-blog-content ul li {
+    margin: 0 0 0 2px;
+  }
 }
 .orb-blog-content ol li {
-    padding: 7px 0 7px 30px;
+  padding: 7px 0 7px 30px;
 }
 .orb-blog-content ol li + li,
 .orb-blog-content ul li + li {
-    @apply border-t dark:border-gray-700;
+  @apply border-t dark:border-gray-700;
 }
 .orb-blog-content li ul,
 .orb-blog-content li ol {
-    margin-bottom: 0px;
-    padding-bottom: 0;
+  margin-bottom: 0px;
+  padding-bottom: 0;
 }
 .orb-blog-content ul li:before {
-    content: "\f101";
-    @apply dark:text-yellow-400 text-blue-800;
-    font-weight: 600;
-    font-family: "Font Awesome 5 Free";
-    padding-right: 10px;
-    display: block;
-    position: absolute;
-    left: 0;
+  content: "\f101";
+  @apply dark:text-yellow-400 text-blue-800;
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
+  padding-right: 10px;
+  display: block;
+  position: absolute;
+  left: 0;
 }
 .orb-blog-content ol li:before {
-    content: counter(steps);
-    place-items: center;
-    background: #38bdf8;
-    color: #000;
-    font-weight: 500;
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 50%;
-    display: inline-grid;
-    position: absolute;
-    left: 0;
+  content: counter(steps);
+  place-items: center;
+  background: #38bdf8;
+  color: #000;
+  font-weight: 500;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  display: inline-grid;
+  position: absolute;
+  left: 0;
 }
 /* --end of lists */
 /* --inline code and highlight js */
 .orb-blog-content code:not(.hljs) {
-    font-size: 90%;
-    @apply bg-gray-200 dark:bg-sky-950 px-1.5 rounded dark:text-sky-300;
+  font-size: 90%;
+  @apply bg-gray-200 dark:bg-sky-950 px-1.5 rounded dark:text-sky-300;
 }
 pre {
-    @apply mb-4;
+  @apply mb-4;
 }
 .hljs {
-    font-size: 90%;
-    background-color: #19212d !important;
-    @apply rounded-lg;
+  font-size: 90%;
+  background-color: #19212d !important;
+  @apply rounded-lg;
 }
 /* --end of inline code */
 /* single blog page CSS */
 
 /* scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
+  width: 10px;
+  height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300;
+  @apply bg-gray-300;
 }
 ::-webkit-scrollbar-track {
-    @apply bg-gray-600;
+  @apply bg-gray-600;
 }
 /* --Hide scrollbar */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
 }
 .ms-scrollbar {
     -ms-overflow-style: none;
     scrollbar-width: none;
-} */
+}
 /* end of scrollbar */
 
 /* animations */
 .fade-in {
-    animation: fadeInAnimation ease 1s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 @keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 /* end of animations */

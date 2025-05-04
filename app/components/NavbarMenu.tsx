@@ -2,28 +2,23 @@ import Link from "next/link";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 export default function NavbarMenu() {
-    return (
-        <ul className="flex flex-col md:flex-row md:gap-8 font-semibold font-head">
-            <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
-                <Link href="/blog">Articles</Link>
-                <MdKeyboardArrowRight className="md:hidden" />
-            </li>
-            <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
-                <Link href="/projects">Projects</Link>
-                <MdKeyboardArrowRight className="md:hidden" />
-            </li>
-            <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
-                <Link href="/portfolio">Portfolio</Link>
-                <MdKeyboardArrowRight className="md:hidden" />
-            </li>
-            <li className="flex md:block justify-between items-center border-b md:border-none pb-2 md:pb-0 mb-2 md:mb-0">
-                <Link href="/dsa">DSA Problems</Link>
-                <MdKeyboardArrowRight className="md:hidden" />
-            </li>
-            <li className="flex md:hidden justify-between items-center">
-                <Link href="/contact">Contact</Link>
-                <MdKeyboardArrowRight className="md:hidden" />
-            </li>
-        </ul>
-    );
+  return (
+    <ul className="flex flex-row overflow-scroll gap-8 font-semibold font-head whitespace-nowrap text-sm md:text-base">
+      <li className="flex md:block justify-between items-center">
+        <Link href="/blog">Articles</Link>
+      </li>
+      <li className="md:block justify-between items-center">
+        <Link href="/projects">Projects</Link>
+      </li>
+      <li className="md:block justify-between items-center">
+        <Link href="/dsa">DSA Problems</Link>
+      </li>
+      <li className="md:block justify-between items-center">
+        <Link href="/portfolio">About Me</Link>
+      </li>
+      <li className="md:hidden justify-between items-center">
+        <Link href="/contact">Contact</Link>
+      </li>
+    </ul>
+  );
 }

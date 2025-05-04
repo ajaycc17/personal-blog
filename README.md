@@ -27,6 +27,7 @@ Solely developed by [Ajay Choudhury](https://linkedin.com/in/ajaycc17).
 ## Feature to work on
 
 - Search for posts + key binding
-- categories for blog
 - infinite scroll in blog/lessons page
 - icon change on dark/light change
+- rename folders and files for better readability
+- improve about me page

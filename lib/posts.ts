@@ -1,6 +1,6 @@
 import { compileMDX } from "next-mdx-remote/rsc";
-import rehypeAutolinkHeadings from "rehype-autolink-headings/lib";
-import rehypeHighlight from "rehype-highlight/lib";
+import rehypeAutolinkHeadings from "rehype-autolink-headings";
+import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import CustomImage from "@/app/components/articles/CustomImage";
 import Video from "@/app/components/articles/Video";
